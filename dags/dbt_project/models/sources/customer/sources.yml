@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: CUSTOMER
+    database: your-project-id
+    schema: your-dataset-name
+    tables:
+      - name: customer
+      - name: customer_error

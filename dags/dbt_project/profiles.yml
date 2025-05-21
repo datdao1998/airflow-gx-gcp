@@ -1,0 +1,18 @@
+
+# For more information on how to configure this file, please see:
+# https://docs.getdbt.com/docs/profile
+
+dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: your-project-id
+      dataset: your-dataset-name
+      keyfile: /usr/local/airflow/dags/credentials/gcp_authen.json
+      location: "asia-southeast1"
+      threads: 10
+      timeout_seconds: 300
+      priority: interactive
+      retries: 1
